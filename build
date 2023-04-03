@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# nasm -fmacho64 $1.asm && gcc $1.o -o $1
+nasm -fmacho64 $1.asm && ld -macosx_version_min 10.7.0 -o $1 $1.o
